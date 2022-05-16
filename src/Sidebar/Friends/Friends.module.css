@@ -1,0 +1,13 @@
+.friendBlockItem {
+    margin: 10px;
+    text-align: center;
+}
+
+.friendAva {
+    height: 60px;
+    border-radius: 100%;
+}
+
+.friendBlockItem p{
+    text-align: center;
+}

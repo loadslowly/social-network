@@ -1,0 +1,41 @@
+.dialogs {
+    display: flex;
+}
+
+.dialogsBlock {
+    display: block;
+}
+
+.form {
+    padding-top: 70px;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form textarea {
+    all: unset;
+    color: #252c33;
+    width: 100%;
+    padding: 10px 0px 30px;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: rgba(174, 209, 245, 0.8);
+    display: block;
+}
+
+.form textarea::placeholder {color: #252c33;}
+
+.form textarea[type=text] {
+    padding: 10px;
+}
+
+.confirm_block button {
+    background-color: rgba(174, 209, 245, 0.8);
+    border: none;
+    margin-top: 15px;
+    padding: 5px 60px 5px 10px;
+    font-size: 18px;
+    font-family: Arial;
+    cursor: pointer;
+}

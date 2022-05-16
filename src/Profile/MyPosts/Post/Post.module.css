@@ -1,0 +1,19 @@
+.news_block {
+    display: flex;
+    align-items: center;
+}
+
+.news_ava img {
+    height: 50px;
+    width: 50px;
+}
+
+.information {
+    padding-left: 20px;
+}
+
+.likes p {
+    margin: 0;
+    font-weight: 200;
+    color: rgba(37, 44, 51, 0.9);
+}

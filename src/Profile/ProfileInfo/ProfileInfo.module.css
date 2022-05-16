@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+}
+
+.ava img {
+    height: 165px;
+    width: 175px;
+}
+
+.description {
+    padding-left: 50px;
+}
+
+.description h3{
+    margin: 0px;
+}
+
+.description p{
+    margin: 0px;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.description p#first {
+    margin-top: 45px;
+}
+
+

@@ -1,0 +1,21 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 3px solid rgba(245, 245, 245, 0.9);
+    margin-bottom: 15px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header img {
+    height: 50px;
+}
+
+.banner {
+    height: 200px;
+    width: 100%;
+    background-color: #aed1f5;
+}

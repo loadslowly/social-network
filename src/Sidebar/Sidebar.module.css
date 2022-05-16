@@ -1,0 +1,33 @@
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 23px;
+}
+
+nav div {
+    padding: 5px;
+}
+
+nav div:last-child {
+    padding-top: 30px;
+}
+
+div a {
+    text-decoration: none;
+    color: #252c33;
+    font-family: Arial;
+}
+
+.active {
+    color: rgb(100, 165, 210);
+}
+
+.friendBlock {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.friends {
+    padding: 20px;
+    text-align: center;
+}
