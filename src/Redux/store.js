@@ -1,3 +1,7 @@
+const ADD_POST = 'ADD-POST';
+const EDIT_POST = 'EDIT-POST';
+const EDIT_MESSAGE = 'EDIT-MESSAGE';
+const ADD_MESSAGE = 'ADD-MESSAGE';
 let store = {
     _state: {
         dialogsPage: {
@@ -10,7 +14,8 @@ let store = {
                 {id: 1, messages: 'Nice one'},
                 {id: 2, messages: 'Kaif'},
                 {id: 3, messages: 'Chto za key?'}
-            ]
+            ],
+            newMessageText: "Load so slowly"
         },
         profilePage: {
             postData:[
@@ -63,8 +68,8 @@ let store = {
         this._callSubscriber(this._state);
     },
 
-    dispatch(action,) {
-        if(action.type === 'ADD-POST'){
+    dispatch(action) {
+        if(action.type === ADD_POST){
             let newPost = {
                 id: 4,
                 message: this._state.profilePage.newPostText,
@@ -74,12 +79,28 @@ let store = {
             this._state.profilePage.postData.push(newPost);
             this._state.profilePage.newPostText = '';
             this._callSubscriber(this._state);
-        } else if (action.type === 'EDIT-POST') {
+        } else if (action.type === EDIT_POST) {
             this._state.profilePage.newPostText = action.text;
+            this._callSubscriber(this._state);
+        } else if (action.type === EDIT_MESSAGE) {
+            this._state.dialogsPage.newMessageText = action.message;
+            this._callSubscriber(this._state);
+        } else if (action.type === ADD_MESSAGE) {
+            let newMessage = {
+                id: 4,
+                messages: this._state.dialogsPage.newMessageText
+            };
+            this._state.dialogsPage.messagesData.push(newMessage);
+            this._state.dialogsPage.newMessageText = '';
             this._callSubscriber(this._state);
         }
     }
 }
+
+export const addPostsActionCreator = (ava) => ({type: ADD_POST, ava:  ava})
+export const onChangePostActionCreator = (text) => ({type: EDIT_POST, text:  text})
+export const onChangeMessageActionCreator = (message) => ({type: EDIT_MESSAGE, message:  message})
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE})
 
 export default store;
 window.store = store;
